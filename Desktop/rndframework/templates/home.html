@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content%}
+<body style="background-color: rgb(184, 222, 248);">
+
+    <div class="container justify-content-end" >
+        <div class="card col-md-4 offset-4" style="height: max-content;;width: 500px;margin-top: 7em;">
+            <h1 class="title">Data Upload</h1>
+            <p>Please, use the following form to Simulate:</p>
+            <form method="POST" enctype="multipart/form-data">  
+                {% csrf_token %}  
+                {{ form.as_p }}  
+                <label for="Methods">Choose a Methos:</label>
+                <select id="selection" name="selection">
+                    
+                  <option value="Multi Dimensional Scaling">Multi Dimensional Scaling</option>
+                  <option value="Sparse Random Projection">Sparse Random Projection</option>
+                  <option value="Gaussian Random Projection">Gaussian Random Projection</option>
+                  <option value="T-SNE">T-SNE</option>
+                  <option value="Isomap">Isomap</option>
+                </select>
+                <br>
+                <br>
+                <center><button class="btn-danger btn-block " style="width: 200px" type="submit">Results</button></center>  
+                <br>
+            </form>  
+        </div>
+    </div>
+    
+    </body>
+{%endblock%}

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{%load static%}
+{%block content%}
+<body style="background-color:rgb(193, 247, 226);"> 
+    <br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 card offset-md-2" style="margin-left: 20em;">
+                
+            
+                {%if 'Gaussian Random Projection' in img_cond%}
+                    <img src="{%static 'imgs/fig4.png'%}">
+                    <h1>Gaussian Random Projection</h1>
+                    {%elif 'Multi Dimensional Scaling' in img_cond%}
+                    <h1>Multi Dimensional Scaling</h1>
+                    <img src="{%static 'imgs/fig2.png'%}">
+                    {%elif 'Sparse Random Projection' in img_cond%}
+                    <h1>Sparse Random Projection</h1>
+                    <img src="{%static 'imgs/fig3.png'%}">
+                    {%elif 'Isomap' in img_cond%}
+                    <h1>Isomap</h1>
+                    <img src="{%static 'imgs/fig5.png'%}">
+                    {%elif 'T-SNE' in img_cond%}
+                    <h1>T-SNE</h1>
+                    <img src="{%static 'imgs/fig6.png'%}">
+                    
+
+                {%endif%}
+            </div>
+        </div>
+    </div>
+</body>
+{%endblock%}
