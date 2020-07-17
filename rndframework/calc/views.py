@@ -25,7 +25,7 @@ def home(request):
             form.save()
             context = {'img_cond':request.POST['selection']}
             
-            ayushi(filn)
+            mds(filn)
             sprndprojection(filn)
             gaurndprojection(filn)
             isomap(filn)
@@ -37,7 +37,7 @@ def home(request):
         return render(request,'home.html',context) 
 
 
-def ayushi(filn):
+def mds(filn):
     df = pd.read_csv('media/'+str(filn))
  
     standardized_data = StandardScaler().fit_transform(df)
