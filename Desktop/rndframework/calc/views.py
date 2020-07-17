@@ -50,7 +50,7 @@ def ayushi(filn):
     reduced_df = np.vstack((reduced_data.T)).T
     reduced_df = pd.DataFrame(data=reduced_df, columns=["X", "Y"])
 
-    reduced_df.head()
+    reduced_df.head() 
     reduced_df.dtypes
     g = sns.FacetGrid(reduced_df, height=6).map(plt.scatter, 'X', 'Y').add_legend()
     plt.savefig('static/imgs/fig2.png')
