@@ -1,3 +1,4 @@
+Website(toolkit) which uses various reduction techniques to visualize high dimensional data into 2D.
 STEPS TO RUN:
 1.install django 
 2.Download the rndframework folder from git repository
